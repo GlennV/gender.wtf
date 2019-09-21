@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div>
+    {% if request.method == 'POST' %}
+        {% if messages %}
+            <div class="alert error">
+                {% for message in messages %}
+                ⛔ {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if correct_range == "0" %}
+            <div class="alert incorrect">👎 {% blocktrans %}NOPE! All wrong{% endblocktrans %}</div>
+        {% elif correct_range == "1-3" %}
+            <div class="alert incorrect">😴 {% blocktrans %}Finally getting started 'ey? (1-3 correct keywords){% endblocktrans %}</div>
+        {% elif correct_range == "4-5" %}
+            <div class="alert incorrect">🔥 {% blocktrans %}Keep going! (4-5 correct keywords){% endblocktrans %}</div>
+        {% elif correct_range == "6-7" %}
+             <div class="alert incorrect">👏 {% blocktrans %}Ok ok, maybe this challenge is too easy? (6-7 correct keywords){% endblocktrans %}</div>
+        {% elif correct_range == "8" %}
+            <div class="alert bingo">🏆 WOOHOO!</div>
+            {% if check_solution_found %}
+                {% include "general/solution.html" %}
+            {% else %}
+                <h1>Hacker alert...</h1>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if correct_range != "8" %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">{% trans "Your name" %}:</label><br />
+                {{ form.name }}
+            </div>
+
+            <div class="form-group">
+                <label for="keywords">{% trans "Keywords (comma separated)" %}:</label><br />
+                {{ form.keywords }}
+            </div>
+
+            <div class="form-group">
+                {{ captcha_form.captcha }}
+            </div>
+
+            <div class="form-group">
+                <button class="submit">{% trans "Check!" %}</button>
+            </div>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

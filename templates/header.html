@@ -1,0 +1,16 @@
+{% load i18n %}{% spaceless %}
+<div id="header">
+    <div class="menu-item"><a href="/">home</a></div>
+    <div class="menu-item separate"><a href="{% url "verify" %}">{% blocktrans %}solution checker{% endblocktrans %}</a></div>
+    <div class="menu-item"><a href="{% url "one:puzzle" %}">1</a></div>
+    <div class="menu-item"><a href="{% url "two" %}">2</a></div>
+    <div class="menu-item"><a href="{% url "three" %}">3</a></div>
+    <div class="menu-item"><a href="{% url "four" %}">4</a></div>
+    <div class="menu-item"><a href="{% url "five:puzzle" %}">5</a></div>
+    <div class="menu-item"><a href="{% url "six" %}">6</a></div>
+    <div class="menu-item"><a href="{% url "seven" %}">7</a></div>
+    <div class="menu-item separate"><a href="{% url "eight" %}">8</a></div>
+    <div class="menu-item"><a href="{% url "language" "nl" %}">nl</a></div>
+    <div class="menu-item"><a href="{% url "language" "en" %}">en</a></div>
+</div>
+{% endspaceless %}

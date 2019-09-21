@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block comments %}
+    <!--
+    Let's make sure the grannies can solve a puzzle too :)
+    -->
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "six.css" %}">
+{% endblock %}
+
+{% block content %}
+<div>
+    <p>{% blocktrans %}Print & solve this Word Search Puzzle with completely random baby names.{% endblocktrans %}</p>
+    <p>{% blocktrans %}Combine the remaining 10 letters from left to right, top to bottom to get the keyword for this challenge.{% endblocktrans %}</p>
+
+    <div id="container" style="margin-top: 25px;">
+        <div id="result">
+            <div id="word_finder">
+                <div class="puzzle">
+                    <div class="tbl" style="min-width:343px;">
+                        <div class="puzzle-row">
+                            <div class="cell 0-0">L</div>
+                            <div class="cell 0-1">O</div>
+                            <div class="cell 0-2">T</div>
+                            <div class="cell 0-3">T</div>
+                            <div class="cell 0-4">E</div>
+                            <div class="cell 0-5">V</div>
+                            <div class="cell 0-6">M</div>
+                            <div class="cell 0-7">A</div>
+                            <div class="cell 0-8">I</div>
+                            <div class="cell 0-9">L</div>
+                            <div class="cell 0-10 last">G</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 1-0">M</div>
+                            <div class="cell 1-1">A</div>
+                            <div class="cell 1-2">N</div>
+                            <div class="cell 1-3">O</div>
+                            <div class="cell 1-4">N</div>
+                            <div class="cell 1-5">I</div>
+                            <div class="cell 1-6">A</div>
+                            <div class="cell 1-7">M</div>
+                            <div class="cell 1-8">B</div>
+                            <div class="cell 1-9">E</div>
+                            <div class="cell 1-10 last">R</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 2-0">N</div>
+                            <div class="cell 2-1">O</div>
+                            <div class="cell 2-2">V</div>
+                            <div class="cell 2-3">A</div>
+                            <div class="cell 2-4">I</div>
+                            <div class="cell 2-5">N</div>
+                            <div class="cell 2-6">R</div>
+                            <div class="cell 2-7">R</div>
+                            <div class="cell 2-8">C</div>
+                            <div class="cell 2-9">O</div>
+                            <div class="cell 2-10 last">V</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 3-0">V</div>
+                            <div class="cell 3-1">D</div>
+                            <div class="cell 3-2">M</div>
+                            <div class="cell 3-3">B</div>
+                            <div class="cell 3-4">L</div>
+                            <div class="cell 3-5">C</div>
+                            <div class="cell 3-6">G</div>
+                            <div class="cell 3-7">U</div>
+                            <div class="cell 3-8">H</div>
+                            <div class="cell 3-9">N</div>
+                            <div class="cell 3-10 last">M</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 4-0">D</div>
+                            <div class="cell 4-1">M</div>
+                            <div class="cell 4-2">R</div>
+                            <div class="cell 4-3">W</div>
+                            <div class="cell 4-4">E</div>
+                            <div class="cell 4-5">E</div>
+                            <div class="cell 4-6">O</div>
+                            <div class="cell 4-7">H</div>
+                            <div class="cell 4-8">I</div>
+                            <div class="cell 4-9">M</div>
+                            <div class="cell 4-10 last">E</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 5-0">E</div>
+                            <div class="cell 5-1">S</div>
+                            <div class="cell 5-2">E</div>
+                            <div class="cell 5-3">O</div>
+                            <div class="cell 5-4">C</div>
+                            <div class="cell 5-5">N</div>
+                            <div class="cell 5-6">T</div>
+                            <div class="cell 5-7">T</div>
+                            <div class="cell 5-8">A</div>
+                            <div class="cell 5-9">M</div>
+                            <div class="cell 5-10 last">L</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 6-0">N</div>
+                            <div class="cell 6-1">I</div>
+                            <div class="cell 6-2">O</div>
+                            <div class="cell 6-3">L</div>
+                            <div class="cell 6-4">T</div>
+                            <div class="cell 6-5">T</div>
+                            <div class="cell 6-6">J</div>
+                            <div class="cell 6-7">R</div>
+                            <div class="cell 6-8">R</div>
+                            <div class="cell 6-9">A</div>
+                            <div class="cell 6-10 last">A</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 7-0">N</div>
+                            <div class="cell 7-1">W</div>
+                            <div class="cell 7-2">L</div>
+                            <div class="cell 7-3">P</div>
+                            <div class="cell 7-4">L</div>
+                            <div class="cell 7-5">C</div>
+                            <div class="cell 7-6">T</div>
+                            <div class="cell 7-7">A</div>
+                            <div class="cell 7-8">A</div>
+                            <div class="cell 7-9">T</div>
+                            <div class="cell 7-10 last">N</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 8-0">I</div>
+                            <div class="cell 8-1">E</div>
+                            <div class="cell 8-2">D</div>
+                            <div class="cell 8-3">U</div>
+                            <div class="cell 8-4">H</div>
+                            <div class="cell 8-5">I</div>
+                            <div class="cell 8-6">I</div>
+                            <div class="cell 8-7">D</div>
+                            <div class="cell 8-8">M</div>
+                            <div class="cell 8-9">H</div>
+                            <div class="cell 8-10 last">I</div>
+                        </div>
+                        <div class="puzzle-row">
+                            <div class="cell 9-0">S</div>
+                            <div class="cell 9-1">L</div>
+                            <div class="cell 9-2">D</div>
+                            <div class="cell 9-3">E</div>
+                            <div class="cell 9-4">J</div>
+                            <div class="cell 9-5">I</div>
+                            <div class="cell 9-6">W</div>
+                            <div class="cell 9-7">V</div>
+                            <div class="cell 9-8">S</div>
+                            <div class="cell 9-9">I</div>
+                            <div class="cell 9-10 last">E</div>
+                        </div>
+                        <div class="puzzle-row last">
+                            <div class="cell 10-0">R</div>
+                            <div class="cell 10-1">E</div>
+                            <div class="cell 10-2">D</div>
+                            <div class="cell 10-3">N</div>
+                            <div class="cell 10-4">A</div>
+                            <div class="cell 10-5">X</div>
+                            <div class="cell 10-6">E</div>
+                            <div class="cell 10-7">L</div>
+                            <div class="cell 10-8">A</div>
+                            <div class="cell 10-9">S</div>
+                            <div class="cell 10-10 last">N</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="placed_words">
+                    <ul class="placed_words">
+                        <li>ALEXANDER</li>
+                        <li>AMBER</li>
+                        <li>ARTHUR</li>
+                        <li>BENJAMIN</li>
+                        <li>CELINE</li>
+                        <li>CHIARA</li>
+                        <li>DENNIS</li>
+                        <li>EMMA</li>
+                        <li>JULIE</li>
+                        <li>LEON</li>
+                        <li>LEWIS</li>
+                        <li>LIAM</li>
+                    </ul>
+                    <ul class="placed_words">
+                        <li>LOTTE</li>
+                        <li>MANON</li>
+                        <li>MARGOT</li>
+                        <li>MARTIJN</li>
+                        <li>MATHIS</li>
+                        <li>MELANIE</li>
+                        <li>NOVA</li>
+                        <li>SOPHIE</li>
+                        <li>VICTOR</li>
+                        <li>VINCENT</li>
+                        <li>WILLEM</li>
+                    </ul>
+                </div>
+
+                <div class="solution">
+                    <p>Keyword:</p>
+                    <div class="tbl">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell last"></div>
+                    </div>
+                </div>
+                <div class="watermark">&copy; <a href="https://woordzoekerfabriek.nl/">woordzoekerfabriek.nl</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

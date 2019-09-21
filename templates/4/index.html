@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div>
+    <p>{% blocktrans %}How much do you actually know about us?{% endblocktrans %}</p>
+    <p>{% blocktrans %}Take the 4th letter of the answers to the following questions:{% endblocktrans %}</p>
+    <ul>
+        <li>🐈 {% blocktrans %}Our cat's breed{% endblocktrans %}</li>
+        <li>🏠 {% blocktrans %}Our street name{% endblocktrans %}</li>
+        <li>🛫 {% blocktrans %}Our <b>next</b> travel destination together?{% endblocktrans %}</li>
+        <li>🛫️ {% blocktrans %}Our <b>first</b> travel destination together?{% endblocktrans %}</li>
+        <li>⛪ {% blocktrans %}City where Sanne grew up{% endblocktrans %}</li>
+        <li>🌽 {% blocktrans %}Town where Glenn grew up{% endblocktrans %}</li>
+        <li>🏖️ {% blocktrans %}Glenn's birth place{% endblocktrans %}</li>
+        <li>⚒️ {% blocktrans %}Glenn's first employer (2013){% endblocktrans %}</li>
+        <li>📛 {% blocktrans %}Sanne's middle name{% endblocktrans %}</li>
+        <li>🥰 {% blocktrans %}"Place" where we first met{% endblocktrans %}</li>
+    </ul>
+    <p>{% blocktrans %}Order all letters alphabetically & convert to lowercase (e.g. aabbccddee) to get the keyword.{% endblocktrans %}</p>
+    <br/>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    {% block comments %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ title }} | Gender Reveal Challenge | gender.wtf">
+    <link rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    {% block css %}{% endblock %}
+    <title>{{ title }} | Gender Reveal Challenge | gender.wtf</title>
+</head>
+<body>
+{% include "header.html" %}
+
+{% block gender %}<h1><span id="gender"></span> {{ title }}</h1>{% endblock %}
+{% block content %}{% endblock %}
+
+<script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% block js %}
+    {% include "js.html" %}
+{% endblock %}
+</body>
+</html>

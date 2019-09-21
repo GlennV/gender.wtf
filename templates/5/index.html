@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block comments %}
+    <!--
+    Reading the source won't help you, getting your ass off the sofa will :)
+    -->
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "six.css" %}">
+{% endblock %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                <div class="alert bingo">
+                    🏆 {{ message }}
+                </div>
+            {% else %}
+                <div class="alert error">
+                    ⛔ {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% static "geocache.gif" as geocache_url %}
+    <p>{% blocktrans %}We had a nice walk through a forest and "forgot" 5 geocaches at the coordinates below. Go find them!{% endblocktrans %}</p>
+    <p>{% blocktrans %}If someone finds a geocache, this will automatically reveal 2 letters of the keyword <b>to everyone</b>.{% endblocktrans %}</p>
+    <p>{% blocktrans %}Oh, the best time to find them is after dark 🦇 as they light up! <a href="{{ geocache_url }}" target="_blank">(check it out)</a>{% endblocktrans %}</p>
+    <br />
+
+    <p>Geocaches:</p>
+    <ul>
+        {% for geocache in geocaches %}
+            <li style="line-height: 20px; margin-bottom: 10px;">
+                <span class="{% if geocache.is_found %}found{% endif %}">{{ geocache.lat|floatformat:5 }}° N / {{ geocache.lon|floatformat:5 }}° E</span>
+
+                {% if geocache.is_found %}
+                    <br />({% blocktrans %}claimed by{% endblocktrans %} <b>{{ geocache.name }}</b>)
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <br />
+
+    <p>Keyword:</p>
+    <div id="word_finder">
+        <div class="solution">
+            <div class="tbl">
+                <div class="cell">{{ keyword.0 }}</div>
+                <div class="cell">{{ keyword.1 }}</div>
+                <div class="cell">{{ keyword.2 }}</div>
+                <div class="cell">{{ keyword.3 }}</div>
+                <div class="cell">{{ keyword.4 }}</div>
+                <div class="cell">{{ keyword.5 }}</div>
+                <div class="cell">{{ keyword.6 }}</div>
+                <div class="cell">{{ keyword.7 }}</div>
+                <div class="cell">{{ keyword.8 }}</div>
+                <div class="cell last">{{ keyword.9 }}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

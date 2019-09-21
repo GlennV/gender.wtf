@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block comments %}
+    <!--
+
+                                                           ```````````
+                                              `..````````..--::::::///---.``
+                                           ``-/+:/oy+:.`````..-://++/--+sso+:.     ``
+                                         `.-/+/+yhyyddo``````````..-.-oyyyssss/.```..-.`
+                                       `-+:/+ohdyhddy/.`````````````..-:/+oooooo/:--++:.
+                                      `.///+hddhdho-````````````````.......--:/++o+/::-`
+                                     `.:/osmdydd/.`````````````````.............---:/-`
+                                      `.:/ohy++:``````````````````...................-`
+                                     `-:..-.--..-`.//:-.`````````......................`
+                                    `-:....-:::-:.+yyyy/:o+:-...------.................-`
+                                   `-/.:`.://::/-oyhhy/:yhhhh//so+/:----.................`
+                                  `-----``.-----shhhy/:yhhhd+/dNNmdo:o/:--..............-`
+                                  .-/+oo++/-.../syyy/:yhddms/dNNNNd/ommdhso/:-..:o+:-.....`
+                                 ````.-:/ossyso+/://-oydmNh/hNNNNm++mmmmmmmddys::/+o+....-`
+                               ``.:/-.`````.:/+syyyso+++sy+yNNNNNs+dNNNmmmmmmdh:+/+/:---.-`
+                               ```::`.......````.-:+shdmdhhyyhdmhohNNNNNmmmmmmo+:--//-..--.
+                              `..-:```````..----.....-/oyhdmNmmdhshhdmNNNmmmmh/+---o---..-.
+                             `.:+:`````````````..--:--:/+ossyhdmNNmdhsssyhdmm+s:--/+------`
+                             `-:+.``````````````...........-/oyyyyhhdmmmhso++:///+o::----.`
+                             ````````````````.................-/syyysoosyhdddyo+:--------.
+                           -..`````````````....................../+oso+/:::/+shddhso/---.`
+                          .+:++```````````..........----...........--:/+++/:----/+syyyo/.
+                          `.-:.``````````........-:/+oo+/-..----...-------:/+++/-----//-`
+                          ```````````````.......-/ooo/+o+o/.---++o/.--------.--:++//-.``
+                       ``````````````````....-..-+o+oooo:o+----s//o----------.....--:.`
+                      `:`````````````````.---:-.-/oooo/++o/.---/o/o/.---------.......`
+                     `/.`````````````````./ooy:..-:++oooo+/+::--s//s-.---..---......`
+                     :-```````````````````-ooo/.--/+++++oshmdy+:/s+y/.---..--......``
+                    .-````````````````````.------/sdmmmmmNNNNNh+:yo+o..--.--......``
+                   ```````````````````````...---:ohNNNNNNNNNNNms/+s++/.----.......`
+                  `-`````````````````````.../+os:+omNNNNNNNNNNNh+:s++s..--.......`
+                 `/.```````````````````..-/+:oos+:+hNNNNNNmNNNmd+:/++/..-.......`
+                 :-`````````````````....-:hh.-----+ommNNNmmNNNmNs/--.-/--......``
+                .:````````````````......:ymo+.....:+hmNNmmddymNNd/-..---.......`
+                .``````````````.`......:omshh--...-/oNNNs+o+:oNNNo-.---.......`
+                ````````````````......-/mhymsdo::..-:hNNd----:mNNh:.--.......`
+               ````````````````......-:ddsmyhmsmyyy:-/mNNss:/hmNNmo.--.......
+              ```````````````.`.....-:ymsmhyNsmdsms:/-hNNNN/++mNNNh-........`
+             `````````````````......:smsddsNyhmsmh:/-./mNNNo//hNNNm+.......`
+            ```````````````.`......::yyymsmdyNsdd//----hNNNm:++NNNNh-.....`
+           ```````````..``.`........-:/ooshomyhm++-.--./mNNNs:/dNNNm/....`
+          ``````````-+ys+:-.............://+o+so+:...---hNNNN/+oNNNNy-...`
+          `````````:mdyyhhy-............-...--:::....--.+mNNNo//50x54/..`
+          ````````.dms..:dh+...........-.....------------hNNNm-o+NmNmy-`
+           ```````:mds--omh-..........--.......---+:-:--.+NmNmo//hymym/.``
+            ```````shhhhhy/...........-........--+h:+o:o--dymsd-o+hdymy-..
+            ````.```.:++:-...........-........--/y:/y:oo/:+dshho//hymym/..`
+             ```.````...............-........--:y/:y:+s:s:-dsmsd-o+yy+o:...`
+             ````````..............--.......--:oo-y//y:s/:.+so+/----------.-`
+                `````......................---::::+:o/o+:.......----------.:.
+                  ````.....................---::::::::::/-.......----------/+```
+                       ```....................----:::::/:--.......----------o::-
+                         ``.......................--------s.......----------/+.....`
+                     `..`.....-----...............------..::.....+shdmNo:----+::---`
+                    `..------.---------........-----------./...--+NNNNNd/:-----:/:..`
+                     ```...-------:----. ````..--------..``--.--:/dNNNNNmo////:::/--`
+                        `.......---:::-..`     `````.``  `..---::smNmmmhy+-------:--.
+                        `.....-----------`               .-///::::so/::----------:--.
+                      ``...--------.```..        .::::--``---:-----------------------.`
+                    ``....--------.``           `/-``./+-....----------------------..-.`
+                   `........-------..`          `/+-```.-.`...-----------------------..-.`   ```
+                 ``...........------.``     ````:+oss+::.`.---------------------------..-.`  ```
+                `..........-----------.````````/+:/osss-..-------...-------------------.--.```````
+              ``.............----------..`````.:so:.+s:.-------..------------------------...``````
+             `............--------------...```-+ssss+-...-----..--------------------------..```````
+           ``............----------------...```.:+so-...-----..----------------------------..``````
+           `...................-----------..`````.:-...------.-------------------------------.``````
+           ``.....------------------------.```````..------------------------------------------.``````
+             ``...--------------------::--````````.--------------------------------------------.``````
+              ``..-:::::::::::::::::::::-......``.---------------------------------------------```````
+             ````...--------------------........``.-------------------------------:-----:-----.```````
+               ```````````````````........````````.--------------------:--:::::::::::::::-----.```````
+                  `````````````````````````````````.---:://++++++ooooooooooosssssssssso+//::-..``````
+                        ```````````````````````````````......................................`````
+                                ```````````      ``````````````````````````````````````````````
+                                                   ``````````````````````````````````````````
+                                                              `````````````````````````
+
+    -... . . .--.  -... . . .--.
+
+    -->
+{% endblock %}
+
+{% block css %}
+    <style>
+        #puzzle-container {
+            display: inline-block;
+            border: 2px solid black;
+            margin-top: 15px;
+            margin-bottom: 50px;
+            height: calc({% widthratio BOARD_HEIGHT 1 SQUARE_HEIGHT %}px + 5px);
+            width: calc({% widthratio BOARD_WIDTH 1 SQUARE_WIDTH %}px + 5px);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <p>{% blocktrans %}Click on a square to check if it contains a hidden letter. Combine 10 hidden letters from left to right, top to bottom to get the keyword for this challenge.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Sounds easy, right? Let's spice things up. You can only click <b>10 squares</b> per hour... so you might need some help!{% endblocktrans %}</p>
+        <p>{% blocktrans %}Because we're not brutally savage, we give away position (1,1) &mdash; that's only 9 more to find. Good luck!{% endblocktrans %}</p>
+        <br/>
+        {% blocktrans %}Clicks left{% endblocktrans %}: <span id="tries_left"></span> <span id="expires_at"></span>
+    </div>
+
+    <div id="puzzle-container">
+        <canvas id="puzzle" width="{% widthratio BOARD_WIDTH 1 SQUARE_WIDTH %}" height="{% widthratio BOARD_HEIGHT 1 SQUARE_HEIGHT %}"></canvas>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {% include "js.html" %}
+    <script>
+        var canvas = document.getElementById('puzzle');
+        var context = canvas.getContext('2d');
+        var socket;
+
+        var squareWidth = {{ SQUARE_WIDTH|escapejs }};
+        var squareHeight = {{ SQUARE_HEIGHT|escapejs }};
+        var boardWidth = {{ BOARD_WIDTH|escapejs }};
+        var boardHeight = {{ BOARD_HEIGHT|escapejs }};
+
+        // Local cache of filled squares
+        var filled = {};
+
+        function guessWrong(x, y) {
+            fillSquare((x - 1) * squareWidth + 1, (y - 1) * squareHeight + 1, "#ff5d5d");
+            filled[x + "x" + y] = "";
+        }
+
+        function guessRight(x, y, key) {
+            fillSquare((x - 1) * squareWidth + 1, (y - 1) * squareHeight + 1, "#37ff21");
+            context.font = "normal 14px Tahoma";
+            context.fillStyle = "black";
+            context.fillText(key, (x - 1) * squareWidth + 4, (y - 1) * squareWidth + 12);
+            filled[x + "x" + y] = key;
+        }
+
+        function updateTries(tries_left, expires_at) {
+            $("#tries_left").html(tries_left);
+            if (expires_at) {
+                $("#expires_at").html("({% blocktrans %}resets back to 10 at{% endblocktrans %} " + expires_at + ")");
+            }
+        }
+
+        function loadGuesses() {
+            // Load all Guesses. Afterwards, only draw updates.
+            $.getJSON("{% url "one:list_guesses" %}").done(function (data) {
+                $.each(JSON.parse(data.guesses), function (ix, el) {
+                    if (el["key"]) {
+                        guessRight(el["x"], el["y"], el["key"])
+                    } else {
+                        guessWrong(el["x"], el["y"])
+                    }
+                });
+
+                updateTries(data.tries_left, data.expires_at);
+            });
+        }
+
+        function guess(mouseX, mouseY) {
+            var coords = coordsForMousePos(mouseX, mouseY);
+
+            if (coords.x + "x" + coords.y in filled) {
+                alert("{% blocktrans %}Hey! Don't waste your clicks on already guessed squares!{% endblocktrans %}");
+                return false;
+            }
+
+            $.get("guess/" + coords.x + "/" + coords.y + "/").done(function (data) {
+                switch (data.status) {
+                    case -3:
+                        alert("{% blocktrans %}Invalid coordinates, don't try to be clever!{% endblocktrans %}");
+                        break;
+                    case -2:
+                        alert("{% blocktrans %}Invalid IP, what are you even doing?{% endblocktrans %}");
+                        break;
+                    case -1:
+                        alert("{% blocktrans %}Whoa! Not so fast... Here is some relaxing music while you wait{% endblocktrans %}: " +
+                            "https://www.youtube.com/watch?v=EbnH3VHzhu8.");
+                        break;
+                    case 0:
+                        if (data.key) {
+                            guessRight(coords.x, coords.y, data.key);
+                        } else {
+                            guessWrong(coords.x, coords.y);
+                        }
+
+                        updateTries(data.tries_left, data.expires_at);
+                        break;
+                }
+            });
+        }
+
+        function coordsForMousePos(mouseX, mouseY) {
+            // Converts mouse coordinates to square coordinates
+            var x_corr = Math.floor(mouseX / squareWidth) + 1;
+            var y_corr = Math.floor(mouseY / squareHeight) + 1;
+
+            return {
+                x: x_corr,
+                y: y_corr
+            }
+        }
+
+        function showCoords(mouseX, mouseY) {
+            var x_offset = $(canvas).position().left;
+            var y_offset = $(canvas).position().top;
+
+            var coords = coordsForMousePos(mouseX, mouseY);
+            var content = $('<span>x: ' + coords.x + ' / y: ' + coords.y + '</span>');
+
+            // Remove active tooltip & draw new one
+            $("#coords").remove();
+            $('<div id="coords">')
+                .css({
+                    "left": x_offset + squareWidth * coords.x + 2 + 'px',
+                    "top": y_offset + squareHeight * coords.y + 2 + 'px'
+                })
+                .append(content)
+                .appendTo(document.body);
+        }
+
+        function getSquare(canvas, evt) {
+            var rect = canvas.getBoundingClientRect();
+            return {
+                x: 1 + (evt.clientX - rect.left) - (evt.clientX - rect.left) % squareWidth,
+                y: 1 + (evt.clientY - rect.top) - (evt.clientY - rect.top) % squareHeight
+            };
+        }
+
+        function drawGrid() {
+            context.fillStyle = "#fdfdfd";
+            context.fillRect(0, 0, squareWidth*boardWidth, squareHeight*boardHeight);
+
+            for (var x = 0; x < squareWidth*boardWidth + 1; x += squareWidth) {
+                context.moveTo(x, 0);
+                context.lineTo(x, squareWidth*boardWidth);
+            }
+
+            for (var y = 0; y < squareHeight*boardHeight + 1; y += squareHeight) {
+                context.moveTo(0, y);
+                context.lineTo(squareHeight*boardHeight, y);
+            }
+
+            context.strokeStyle = "#ddd";
+            context.stroke();
+        }
+
+        function fillSquare(x, y, color) {
+            context.fillStyle = color;
+            context.fillRect(x, y, squareWidth - 1, squareHeight - 1);
+        }
+
+        // Event Listeners
+        $(canvas).mousemove(function (evt) {
+            var mousePos = getSquare(canvas, evt);
+            showCoords(mousePos.x, mousePos.y);
+        });
+        $(canvas).click(function (evt) {
+            var mousePos = getSquare(canvas, evt);
+            guess(mousePos.x, mousePos.y);
+        });
+        $(canvas).mouseout(function () {
+            $("#coords").remove();
+        });
+
+        function setupWebsocket() {
+            // WebSocket for collaboration
+            {% if DEBUG %}
+                socket = new WebSocket('ws://' + window.location.host + '/ws/one/');
+            {% else %}
+                socket = new WebSocket('wss://' + window.location.host + '/ws/one/');
+            {% endif %}
+
+            socket.onmessage = function (e) {
+                var data = JSON.parse(e.data);
+                if (data.key) {
+                    guessRight(data.x, data.y, data.key);
+                } else {
+                    guessWrong(data.x, data.y);
+                }
+            };
+
+            socket.onclose = function (e) {
+                alert('Connection error - please reload page.');
+            };
+        }
+
+        $(document).ready(function () {
+            drawGrid(context);
+            loadGuesses();
+            setupWebsocket();
+        })
+    </script>
+{% endblock %}

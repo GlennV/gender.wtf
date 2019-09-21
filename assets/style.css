@@ -1,0 +1,247 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: repeating-linear-gradient(
+      45deg,
+      #FFB6C115,
+      #FFB6C115 50px,
+      #87CEFA15 50px,
+      #87CEFA15 100px
+    );
+
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+input, textarea, select, form button {
+    margin: 2px 0;
+    padding: 2px 3px;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+input, textarea {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 0 black;
+    width: 100%;
+    max-width: 400px;
+
+    resize: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+form button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    border: 1px solid #868686;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 0 black;
+}
+
+form button:hover {
+    animation-name: color-fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color-fade {
+    0% {
+        background-color: lightpink;
+    }
+    50% {
+        background-color: lightskyblue;
+    }
+    100% {
+        background-color: lightpink;
+    }
+}
+
+p {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 500px;
+}
+
+#gender {
+    width: 40px;
+    display: inline-block;
+}
+
+#coords {
+    position: absolute;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 200px;
+    height: 25px;
+    padding: 0 5px;
+    color: white;
+}
+
+#tries_left {
+    font-weight: bold;
+}
+
+#expires_at {
+    font-size: 13px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+}
+
+#header a {
+    color: grey;
+    text-decoration: none;
+    width: 19px;
+}
+
+#header div {
+    display: inline-block;
+}
+
+#header {
+    margin-left: 0;
+    font-size: 14px;
+}
+
+#header::before {
+    content: "[";
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+#header::after {
+    content: "]";
+    margin-left: 3px;
+    font-size: 18px;
+}
+
+.menu-item:not(:last-child)::after {
+    content: "|";
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.menu-item.separate::after {
+    content: "] [";
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.alert {
+    border-radius: 15px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 25px;
+}
+
+.alert.error {
+    border: 1px solid red;
+    background-color: #ffd4dc;
+    box-shadow: 1px 1px 0 0 red;
+}
+
+.alert.incorrect {
+    border: 1px solid orange;
+    background-color: #fff6d3;
+    box-shadow: 1px 1px 0 0 orange;
+}
+
+.alert.bingo {
+    border: 1px solid green;
+    background-color: #dbffd9;
+    box-shadow: 1px 1px 0 0 green;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.gender {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("gender.gif");
+    background-size: contain;
+    background-position-y: 2px;
+    background-repeat: no-repeat;
+}
+
+::selection {
+  background: #fff6d3;
+}
+
+::-moz-selection {
+  background: #fff6d3;
+}
+
+a[target="_blank"], a.blink {
+    color: black;
+    padding: 1px;
+    text-decoration: none;
+    animation-name: color-fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.gradient-title {
+    display: inline-block;
+    background: repeating-linear-gradient(
+      45deg,
+      #ff8fa0,
+      #FFB6C1 50px,
+      #87CEFA 50px,
+      #5dc1ff 100px
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.found::before {
+    content: "✅";
+}
+
+.found {
+    color: green;
+}

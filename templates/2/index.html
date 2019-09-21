@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block comments %}
+    <!--
+
+    🍑 🍆 😏 ➡️ 💐 🐝 ➡️ 🧬 ➡️ 🤰 🏥 🔜 👶🏻
+
+    🤭
+
+    -->
+{% endblock %}
+
+{% block content %}
+<div>
+    <p>{% blocktrans %}Finally, some good music! Get your headphones ready &mdash; you're about to go back in time.{% endblocktrans %}</p>
+    <p>{% blocktrans %}You need to combine the <b>first two letters</b> of:{% endblocktrans %}</p>
+    <ul>
+        <li>{% blocktrans %}The <b>artist</b> of the longest song <b>(the original album version)</b>.{% endblocktrans %}</li>
+        <li>{% blocktrans %}The <b>title</b> of the longest song <b>(measured in this mixtape)</b>.{% endblocktrans %}</li>
+        <li>{% blocktrans %}The <b>title</b> of the oldest song <b>by release date</b>.{% endblocktrans %}</li>
+        <li>{% blocktrans %}The <b>artist</b> of song with the <b>most plays on Spotify</b> (when in doubt, take the version with the most plays).{% endblocktrans %}</li>
+        <li>{% blocktrans %}The <b>artist</b> of the song in <b>10th place</b> when sorting all titles alphabetically in ascending order.{% endblocktrans %}</li>
+    </ul>
+    <p>{% blocktrans %}Order all letters alphabetically & convert to lowercase (e.g. aabbccddee) to get the keyword.{% endblocktrans %}</p>
+    <br/>
+    <audio controls loop style="position: absolute;">
+        <source src="{% static "two.mp3" %}" type="audio/mpeg">
+    </audio>
+</div>
+{% endblock %}
+
+{% block js %}
+    {% include "js.html" %}
+
+    <script>
+        // Forgive me.
+        var i = 0;
+        $("audio").mouseover(function() {
+            if(i === 0) {
+                alert("{% blocktrans %}You didn't think I was just going to let you play the music, did you?{% endblocktrans %}");
+            }
+
+            if(i >= 10) {
+                // Ok ok.
+                $(this).css("position", "relative").css("top", "").css("left", "");
+                return false;
+            }
+
+            $(this).css("top", Math.random()*800);
+            i++;
+        })
+    </script>
+{% endblock %}

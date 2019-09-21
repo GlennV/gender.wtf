@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block css %}
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <p>If only you could see what I hear...</p>
+    <audio controls="controls" loop>
+        <source src="{% static "three.mp3" %}" type="audio/mpeg">
+    </audio>
+</div>
+{% endblock %}

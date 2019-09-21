@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div>
+    {% if messages %}
+        <div class="alert error">
+            {% for message in messages %}
+            ⛔ {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">{% blocktrans %}Your name{% endblocktrans %}:</label><br />
+            {{ form.name }}
+        </div>
+
+        <div class="form-group">
+            <button class="submit">{% blocktrans %}Claim!{% endblocktrans %}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block gender %}<h1><span id="gender"></span> {% blocktrans %}Welcome to the{% endblocktrans %} <span class="gradient-title">Gender Reveal Challenge</span>!</h1>{% endblock %}
+
+{% block content %}
+    {% url "verify" as url_verify %}
+    <div>
+        <p>{% blocktrans %}Hello friends, family & randos,{% endblocktrans %}</p>
+        <p><br />{% blocktrans %}We are very excited to announce that we're having a baby and that <b>you</b> can find out the gender before everyone else!{% endblocktrans %}</p>
+        <p><br />{% blocktrans %}We decided to take "gender reveal party" to the next level and release <b>8 challenges</b> to the world.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Each challenge has a random lowercase 10-letter keyword as solution (example: <b>keywordone</b>). Get all 8 keywords to find out the gender!{% endblocktrans %}</p>
+        <p>{% blocktrans %}Verify your solutions with the <a class="blink" href="{{ url_verify }}">solution checker</a>.{% endblocktrans %}</p>
+        <p><br />{% blocktrans %}Challenges vary in difficulty from granny-proof to hacker-proof, and some will require working together.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Please join the <a href="https://www.facebook.com/groups/gender.wtf/" target="_blank">Gender Reveal Challenge</a> group on Facebook to share progress & solutions, report issues and find hints.{% endblocktrans %}</p>
+        <p><br />{% blocktrans %}We had a blast creating this challenge, and we hope you'll like it!{% endblocktrans %}</p>
+        <p><br />{% blocktrans %}Good luck & have fun!{% endblocktrans %}</p>
+        <p>🤰Sanne & 👨‍💻Glenn</p>
+    </div>
+{% endblock %}

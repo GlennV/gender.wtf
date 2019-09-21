@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block css %}
+    <style>
+        body {
+            background: #17140f;
+            color: white;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <p>Colors speak (louder than) words.</p>
+    <img src="{% static "thr333.jpg" %}" alt="😼" />
+</div>
+{% endblock %}

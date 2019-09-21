@@ -1,0 +1,664 @@
+#result {
+    clear: both;
+    overflow: hidden;
+}
+
+#word_finder {
+    overflow: hidden;
+    display: inline-block
+}
+
+#word_finder h2 {
+    text-align: left;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 400
+}
+
+#placed_words {
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 10px 0;
+    line-height: 19px
+}
+
+#placed_words ul {
+    margin: 0 10px 0 0;
+    padding: 0;
+    float: left
+}
+
+#placed_words ul.last {
+    margin-right: 0
+}
+
+#placed_words ul li {
+    list-style: none
+}
+
+#placed_words a {
+    text-decoration: none;
+    color: #333
+}
+
+#placed_words a:hover {
+    color: #e3cb1c
+}
+
+#placed_words a.checked {
+    text-decoration: line-through
+}
+
+.solution a.btnToggleSolution, #placed_words a.btnReset {
+    color: #77beff;
+    text-decoration: none
+}
+
+.solution a.btnToggleSolution:hover, #placed_words a.btnReset:hover {
+    color: #000
+}
+
+#placed_words a.btnReset.disabled {
+    display: none
+}
+
+.placed-words-tip {
+    margin-top: 12px;
+    clear: both;
+    float: left
+}
+
+.placed-words-tip .glyphicon {
+    color: #77beff;
+    transform: rotate(-68deg)
+}
+
+#word_finder .puzzle {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px
+}
+
+#word_finder .tbl {
+    border: 1px solid #000
+}
+
+.puzzle.lowercase {
+    text-transform: lowercase
+}
+
+.puzzle-row {
+    overflow: hidden
+}
+
+.cell {
+    font-size: 16px;
+    line-height: 31px;
+    background-color: #fff;
+    height: 31px;
+    width: 31px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    border: none;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear
+}
+
+.cell.last {
+    border-right: none
+}
+
+.puzzle-row.last .cell {
+    border-bottom: none
+}
+
+.cell.check {
+    background-color: #77beff;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear
+}
+
+.cell.highlight {
+    background-color: #ffed69
+}
+
+.grid-1 .puzzle .tbl {
+    min-width: 33px
+}
+
+.grid-2 .puzzle .tbl {
+    min-width: 64px
+}
+
+.grid-3 .puzzle .tbl {
+    min-width: 95px
+}
+
+.grid-4 .puzzle .tbl {
+    min-width: 126px
+}
+
+.grid-5 .puzzle .tbl {
+    min-width: 157px
+}
+
+.grid-6 .puzzle .tbl {
+    min-width: 188px
+}
+
+.grid-7 .puzzle .tbl {
+    min-width: 219px
+}
+
+.grid-8 .puzzle .tbl {
+    min-width: 250px
+}
+
+.grid-9 .puzzle .tbl {
+    min-width: 281px
+}
+
+.grid-10 .puzzle .tbl {
+    min-width: 312px
+}
+
+.grid-11 .puzzle .tbl {
+    min-width: 343px
+}
+
+.grid-12 .puzzle .tbl {
+    min-width: 374px
+}
+
+.grid-13 .puzzle .tbl {
+    min-width: 405px
+}
+
+.grid-14 .puzzle .tbl {
+    min-width: 436px
+}
+
+.grid-15 .puzzle .tbl {
+    min-width: 467px
+}
+
+.grid-16 .puzzle .tbl {
+    min-width: 498px
+}
+
+.grid-17 .puzzle .tbl {
+    min-width: 529px
+}
+
+.grid-18 .puzzle .tbl {
+    min-width: 560px
+}
+
+.grid-19 .puzzle .tbl {
+    min-width: 591px
+}
+
+.grid-20 .puzzle .tbl {
+    min-width: 622px
+}
+
+.grid-21 .puzzle .tbl {
+    min-width: 653px
+}
+
+.grid-22 .puzzle .tbl {
+    min-width: 684px
+}
+
+.grid-23 .puzzle .tbl {
+    min-width: 715px
+}
+
+.grid-24 .puzzle .tbl {
+    min-width: 746px
+}
+
+.grid-25 .puzzle .tbl {
+    min-width: 777px
+}
+
+.solution {
+    clear: both
+}
+
+.solution table {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 8px
+}
+
+.solution .tbl {
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
+.solution .cell {
+    border-bottom: none;
+    border-right: solid 1px #000;
+    width: 20px;
+    height: 24px;
+    line-height: 24px
+}
+
+.solution .cell.last {
+    border-right: none
+}
+
+.placed_words.lowercase {
+    text-transform: lowercase
+}
+
+#word-finder-overlay {
+    position: absolute
+}
+
+.watermark {
+    clear: both;
+    float: left;
+    font-size: 12px
+}
+
+.watermark a {
+    color: #333;
+    text-decoration: none
+}
+
+.watermark a:hover {
+    color: #27bcff
+}
+
+@media only screen and (max-width: 991px) {
+    .result-container {
+        margin: 20px 0
+    }
+}
+
+@media only screen and (max-width: 466px) {
+    #word_finder .puzzle {
+        margin-right: 0
+    }
+
+    .grid-10 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-10 .cell, .solution .grid-10 .cell {
+        font-size: 15.638709677419px;
+        line-height: 30.3px;
+        height: 30.3px;
+        width: 30.3px
+    }
+
+    .grid-11 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-11 .cell, .solution .grid-11 .cell {
+        font-size: 14.217008797654px;
+        line-height: 27.545454545455px;
+        height: 27.545454545455px;
+        width: 27.545454545455px
+    }
+
+    .grid-12 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-12 .cell, .solution .grid-12 .cell {
+        font-size: 13.032258064516px;
+        line-height: 25.25px;
+        height: 25.25px;
+        width: 25.25px
+    }
+
+    .grid-13 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-13 .cell, .solution .grid-13 .cell {
+        font-size: 12.029776674938px;
+        line-height: 23.307692307692px;
+        height: 23.307692307692px;
+        width: 23.307692307692px
+    }
+
+    .grid-14 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-14 .cell, .solution .grid-14 .cell {
+        font-size: 11.170506912442px;
+        line-height: 21.642857142857px;
+        height: 21.642857142857px;
+        width: 21.642857142857px
+    }
+
+    .grid-15 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-15 .cell, .solution .grid-15 .cell {
+        font-size: 10.425806451613px;
+        line-height: 20.2px;
+        height: 20.2px;
+        width: 20.2px
+    }
+
+    .grid-16 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-16 .cell, .solution .grid-16 .cell {
+        font-size: 9.7741935483871px;
+        line-height: 18.9375px;
+        height: 18.9375px;
+        width: 18.9375px
+    }
+
+    .grid-17 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-17 .cell, .solution .grid-17 .cell {
+        font-size: 9.1992409867173px;
+        line-height: 17.823529411765px;
+        height: 17.823529411765px;
+        width: 17.823529411765px
+    }
+
+    .grid-18 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-18 .cell, .solution .grid-18 .cell {
+        font-size: 8.6881720430108px;
+        line-height: 16.833333333333px;
+        height: 16.833333333333px;
+        width: 16.833333333333px
+    }
+
+    .grid-19 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-19 .cell, .solution .grid-19 .cell {
+        font-size: 8.2308998302207px;
+        line-height: 15.947368421053px;
+        height: 15.947368421053px;
+        width: 15.947368421053px
+    }
+
+    .grid-20 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-20 .cell, .solution .grid-20 .cell {
+        font-size: 7.8193548387097px;
+        line-height: 15.15px;
+        height: 15.15px;
+        width: 15.15px
+    }
+
+    .grid-21 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-21 .cell, .solution .grid-21 .cell {
+        font-size: 7.4470046082949px;
+        line-height: 14.428571428571px;
+        height: 14.428571428571px;
+        width: 14.428571428571px
+    }
+
+    .grid-22 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-22 .cell, .solution .grid-22 .cell {
+        font-size: 7.108504398827px;
+        line-height: 13.772727272727px;
+        height: 13.772727272727px;
+        width: 13.772727272727px
+    }
+
+    .grid-23 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-23 .cell, .solution .grid-23 .cell {
+        font-size: 6.7994389901823px;
+        line-height: 13.173913043478px;
+        height: 13.173913043478px;
+        width: 13.173913043478px
+    }
+
+    .grid-24 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-24 .cell, .solution .grid-24 .cell {
+        font-size: 6.5161290322581px;
+        line-height: 12.625px;
+        height: 12.625px;
+        width: 12.625px
+    }
+
+    .grid-25 .puzzle .tbl {
+        min-width: 305px
+    }
+
+    .grid-25 .cell, .solution .grid-25 .cell {
+        font-size: 6.2554838709677px;
+        line-height: 12.12px;
+        height: 12.12px;
+        width: 12.12px
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .grid-9 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-9 .cell, .solution .grid-9 .cell {
+        font-size: 14.222222222222px;
+        line-height: 27.555555555556px;
+        height: 27.555555555556px;
+        width: 27.555555555556px
+    }
+
+    .grid-10 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-10 .cell, .solution .grid-10 .cell {
+        font-size: 12.8px;
+        line-height: 24.8px;
+        height: 24.8px;
+        width: 24.8px
+    }
+
+    .grid-11 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-11 .cell, .solution .grid-11 .cell {
+        font-size: 11.636363636364px;
+        line-height: 22.545454545455px;
+        height: 22.545454545455px;
+        width: 22.545454545455px
+    }
+
+    .grid-12 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-12 .cell, .solution .grid-12 .cell {
+        font-size: 10.666666666667px;
+        line-height: 20.666666666667px;
+        height: 20.666666666667px;
+        width: 20.666666666667px
+    }
+
+    .grid-13 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-13 .cell, .solution .grid-13 .cell {
+        font-size: 9.8461538461538px;
+        line-height: 19.076923076923px;
+        height: 19.076923076923px;
+        width: 19.076923076923px
+    }
+
+    .grid-14 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-14 .cell, .solution .grid-14 .cell {
+        font-size: 9.1428571428571px;
+        line-height: 17.714285714286px;
+        height: 17.714285714286px;
+        width: 17.714285714286px
+    }
+
+    .grid-15 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-15 .cell, .solution .grid-15 .cell {
+        font-size: 8.5333333333333px;
+        line-height: 16.533333333333px;
+        height: 16.533333333333px;
+        width: 16.533333333333px
+    }
+
+    .grid-16 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-16 .cell, .solution .grid-16 .cell {
+        font-size: 8px;
+        line-height: 15.5px;
+        height: 15.5px;
+        width: 15.5px
+    }
+
+    .grid-17 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-17 .cell, .solution .grid-17 .cell {
+        font-size: 7.5294117647059px;
+        line-height: 14.588235294118px;
+        height: 14.588235294118px;
+        width: 14.588235294118px
+    }
+
+    .grid-18 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-18 .cell, .solution .grid-18 .cell {
+        font-size: 7.1111111111111px;
+        line-height: 13.777777777778px;
+        height: 13.777777777778px;
+        width: 13.777777777778px
+    }
+
+    .grid-19 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-19 .cell, .solution .grid-19 .cell {
+        font-size: 6.7368421052632px;
+        line-height: 13.052631578947px;
+        height: 13.052631578947px;
+        width: 13.052631578947px
+    }
+
+    .grid-20 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-20 .cell, .solution .grid-20 .cell {
+        font-size: 6.4px;
+        line-height: 12.4px;
+        height: 12.4px;
+        width: 12.4px
+    }
+
+    .grid-21 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-21 .cell, .solution .grid-21 .cell {
+        font-size: 6.0952380952381px;
+        line-height: 11.809523809524px;
+        height: 11.809523809524px;
+        width: 11.809523809524px
+    }
+
+    .grid-22 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-22 .cell, .solution .grid-22 .cell {
+        font-size: 5.8181818181818px;
+        line-height: 11.272727272727px;
+        height: 11.272727272727px;
+        width: 11.272727272727px
+    }
+
+    .grid-23 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-23 .cell, .solution .grid-23 .cell {
+        font-size: 5.5652173913043px;
+        line-height: 10.782608695652px;
+        height: 10.782608695652px;
+        width: 10.782608695652px
+    }
+
+    .grid-24 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-24 .cell, .solution .grid-24 .cell {
+        font-size: 5.3333333333333px;
+        line-height: 10.333333333333px;
+        height: 10.333333333333px;
+        width: 10.333333333333px
+    }
+
+    .grid-25 .puzzle .tbl {
+        min-width: 250px
+    }
+
+    .grid-25 .cell, .solution .grid-25 .cell {
+        font-size: 5.12px;
+        line-height: 9.92px;
+        height: 9.92px;
+        width: 9.92px
+    }
+}

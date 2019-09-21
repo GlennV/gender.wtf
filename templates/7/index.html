@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div>
+    <p>{% blocktrans %}Let's get lyrical! 🎵 We translated lyrics of 10 songs we like.{% endblocktrans %}</p>
+    <p>{% blocktrans %}Take the first <b>letter</b> of the <b>title</b> of the songs we translated:{% endblocktrans %}</p>
+    <ol style="max-width: 500px;">
+        <li style="line-height: 20px; margin-bottom: 10px;">Maak je geest vrij en doe mee<br />Je voelt het in de lucht</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Voor altijd, tot het einde der tijden<br />Vanaf nu alleen jij en ik</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Jij en ik schatje<br />is niets anders dan zoogdieren</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Reprenez-vous et dépoussiérez-vous<br />et remettez-vous en selle</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Quatre-vingt dix-neuf ballons<br />En route vers l'horizon</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Vous essayez de me sauver, arrêtez de retenir votre souffle<br />Et tu penses que je suis fou, ouais, tu penses que je suis fou</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">Η μαμά λέει ότι όταν φαίνονται καλά <br />Καταλήγουμε πάντα στην εύρεση</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">所以，安妮，你还好吗？ <br />安妮，你还好吗？</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">जब उनी केवल एक केटी थिइनन् उनले संसारको आशा गर्छिन् <br />तर यो उनको पहुँचबाट उड्यो र बुलेटहरूले उनको दाँत समातिन्</li>
+        <li style="line-height: 20px; margin-bottom: 10px;">De wylde hûnen skrieme nachts<br />As se rêsteloos wurde, langst nei ien solitêr bedriuw</li>
+    </ol>
+    <p>{% blocktrans %}Order all letters alphabetically & convert to lowercase (e.g. aabbccddee) to get the keyword.{% endblocktrans %}</p>
+    <br/>
+</div>
+{% endblock %}
