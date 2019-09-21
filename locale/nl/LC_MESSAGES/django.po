@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 18:40+0200\n"
-"PO-Revision-Date: 2019-09-10 18:40+0200\n"
+"POT-Creation-Date: 2019-09-21 13:34+0200\n"
+"PO-Revision-Date: 2019-09-21 13:34+0200\n"
 "Last-Translator: Glenn Vanhaeren <glenn@keurfirma.be>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.3\n"
 
-#: about/forms.py:28
+#: core/forms.py:27
 msgid "Please enter between 1 and 8 keywords."
 msgstr "Voer tussen 1 en 8 sleutelwoorden in."
 
-#: about/forms.py:31
+#: core/forms.py:30
 msgid "Please enter at most 8 keywords."
 msgstr "Gelieve maximaal 8 sleutelwoorden in te voeren."
 
-#: about/forms.py:36
+#: core/forms.py:35
 #, python-format
 msgid ""
 "Invalid keyword \"%(keyword)s\". Keywords are letters only and exactly 10 "
@@ -35,15 +35,23 @@ msgstr ""
 "Ongeldig sleutelwoord \"%(keyword)s\". Sleutelwoorden bevatten alleen "
 "letters en zijn precies 10 tekens lang."
 
-#: about/views.py:64
+#: core/views.py:37
+msgid "Welcome"
+msgstr "Welkom"
+
+#: core/views.py:54
 msgid "Invalid reCAPTCHA."
 msgstr "Ongeldige reCAPTCHA."
 
-#: five/views.py:32
+#: core/views.py:77 core/views.py:89
+msgid "Solution checker"
+msgstr "Oplossing controleren"
+
+#: five/views.py:34
 msgid "Whoops, this geocache was already claimed by someone else!"
 msgstr "Oeps, deze geocache werd al door iemand anders geclaimd!"
 
-#: five/views.py:44
+#: five/views.py:46
 msgid ""
 "You succesfully claimed this geocache! Good job, you just unlocked 2 letters "
 "of the keyword."
@@ -51,19 +59,19 @@ msgstr ""
 "Je hebt deze geocache geclaimd! Super, je hebt net 2 letters van het "
 "sleutelwoord ontgrendeld."
 
-#: five/views.py:48
+#: five/views.py:51
 msgid "Please enter your name!"
 msgstr "Vul je naam in!"
 
-#: project/settings/base.py:96
+#: project/settings/base.py:95
 msgid "Nederlands"
 msgstr "Nederlands"
 
-#: project/settings/base.py:97
+#: project/settings/base.py:96
 msgid "English"
 msgstr "Engels"
 
-#: templates/1/index.html:103
+#: templates/1/index.html:107
 msgid ""
 "Click on a square to check if it contains a hidden letter. Combine 10 hidden "
 "letters from left to right, top to bottom to get the keyword for this "
@@ -73,7 +81,7 @@ msgstr ""
 "Combineer 10 verborgen letters van links naar rechts en van boven naar "
 "beneden om het sleutelwoord voor deze challenge te verkrijgen."
 
-#: templates/1/index.html:104
+#: templates/1/index.html:108
 msgid ""
 "Sounds easy, right? Let's spice things up. You can only click <b>10 squares</"
 "b> per hour... so you might need some help!"
@@ -82,7 +90,7 @@ msgstr ""
 "<b>10 hokjes</b> per IP per uur aanklikken.... dus wellicht heb je hulp "
 "nodig!"
 
-#: templates/1/index.html:105
+#: templates/1/index.html:109
 msgid ""
 "Because we're not brutally savage, we give away position (1,1) &mdash; "
 "that's only 9 more to find. Good luck!"
@@ -90,32 +98,32 @@ msgstr ""
 "Omdat we niet volledig wreed zijn, geven we positie (1,1) weg &mdash; dat is "
 "nog slechts 9 te gaan. Veel succes!"
 
-#: templates/1/index.html:107
+#: templates/1/index.html:111
 msgid "Clicks left"
 msgstr "Resterende pogingen"
 
-#: templates/1/index.html:139
+#: templates/1/index.html:150
 msgid "resets back to 10 at"
 msgstr "reset naar 10 op"
 
-#: templates/1/index.html:162
+#: templates/1/index.html:173
 msgid "Hey! Don't waste your clicks on already guessed squares!"
 msgstr "Hé! Verspil je pogingen niet aan reeds geraden hokjes!"
 
-#: templates/1/index.html:169
+#: templates/1/index.html:180
 msgid "Invalid coordinates, don't try to be clever!"
 msgstr "Ongeldige coördinaten, probeer niet de wijsneus uit te hangen!"
 
-#: templates/1/index.html:172
+#: templates/1/index.html:183
 msgid "Invalid IP, what are you even doing?"
 msgstr "Ongeldig IP, wat doe je eigenlijk?"
 
-#: templates/1/index.html:175
+#: templates/1/index.html:186
 msgid "Whoa! Not so fast... Here is some relaxing music while you wait"
 msgstr ""
 "Whoa! Niet zo snel.... Hier is wat ontspannende muziek terwijl je wacht"
 
-#: templates/2/index.html:24
+#: templates/2/index.html:18
 msgid ""
 "Finally, some good music! Get your headphones ready &mdash; you're about to "
 "go back in time."
@@ -123,26 +131,26 @@ msgstr ""
 "Eindelijk, een streepje muziek! Zet je hoofdtelefoon op &mdash; je staat op "
 "het punt om terug in de tijd te gaan."
 
-#: templates/2/index.html:25
+#: templates/2/index.html:19
 msgid "You need to combine the <b>first two letters</b> of:"
 msgstr "Je moet de <b>eerste twee letters</b> combineren van:"
 
-#: templates/2/index.html:27
+#: templates/2/index.html:21
 msgid ""
 "The <b>artist</b> of the longest song <b>(the original album version)</b>."
 msgstr ""
 "De <b>artiest</b> van het langste nummer <b>(de originele albumversie)</b>."
 
-#: templates/2/index.html:28
+#: templates/2/index.html:22
 msgid "The <b>title</b> of the longest song <b>(measured in this mixtape)</b>."
 msgstr ""
 "De <b>titel</b> van het langste nummer <b>(gemeten in deze mixtape)</b>."
 
-#: templates/2/index.html:29
+#: templates/2/index.html:23
 msgid "The <b>title</b> of the oldest song <b>by release date</b>."
 msgstr "De <b>titel</b> van het oudste liedje <b>volgens releasedatum</b>."
 
-#: templates/2/index.html:30
+#: templates/2/index.html:24
 msgid ""
 "The <b>artist</b> of song with the <b>most plays on Spotify</b> (when in "
 "doubt, take the version with the most plays)."
@@ -150,7 +158,7 @@ msgstr ""
 "De <b>artiest</b> van het nummer met de <b>meeste plays op Spotify</b> (neem "
 "bij twijfel de versie met de meeste plays)."
 
-#: templates/2/index.html:31
+#: templates/2/index.html:25
 msgid ""
 "The <b>artist</b> of the song in <b>10th place</b> when sorting all titles "
 "alphabetically in ascending order."
@@ -158,8 +166,8 @@ msgstr ""
 "De <b>artiest</b> van het nummer op <b>de 10e plaats</b> bij het alfabetisch "
 "sorteren van alle titels."
 
-#: templates/2/index.html:33 templates/4/index.html:31
-#: templates/7/index.html:34
+#: templates/2/index.html:27 templates/4/index.html:22
+#: templates/7/index.html:22
 msgid ""
 "Order all letters alphabetically & convert to lowercase (e.g. aabbccddee) to "
 "get the keyword."
@@ -167,72 +175,68 @@ msgstr ""
 "Sorteer alle letters alfabetisch en zet om naar kleine letters (bv. "
 "aabbccddee) om het sleutelwoord te verkrijgen."
 
-#: templates/2/index.html:46
+#: templates/2/index.html:43
 msgid "You didn't think I was just going to let you play the music, did you?"
 msgstr ""
 "Je dacht toch niet dat ik je gewoon de muziek zou laten spelen, of wel?"
 
-#: templates/4/index.html:17
+#: templates/4/index.html:8
 msgid "How much do you actually know about us?"
 msgstr "Hoeveel weet je eigenlijk over ons?"
 
-#: templates/4/index.html:18
+#: templates/4/index.html:9
 msgid "Take the 4th letter of the answers to the following questions:"
 msgstr "Neem de 4e letter van de antwoorden op de volgende vragen:"
 
-#: templates/4/index.html:20
+#: templates/4/index.html:11
 msgid "Our cat's breed"
 msgstr "Onze kat haar ras"
 
-#: templates/4/index.html:21
+#: templates/4/index.html:12
 msgid "Our street name"
 msgstr "Onze straatnaam"
 
-#: templates/4/index.html:22
+#: templates/4/index.html:13
 msgid "Our <b>next</b> travel destination together?"
 msgstr "Onze <b>volgende</b> reisbestemming samen?"
 
-#: templates/4/index.html:23
+#: templates/4/index.html:14
 msgid "Our <b>first</b> travel destination together?"
 msgstr "Onze <b>eerste</b> reisbestemming samen?"
 
-#: templates/4/index.html:24
+#: templates/4/index.html:15
 msgid "City where Sanne grew up"
 msgstr "Stad waar Sanne opgroeide"
 
-#: templates/4/index.html:25
+#: templates/4/index.html:16
 msgid "Town where Glenn grew up"
 msgstr "Dorp waar Glenn opgroeide"
 
-#: templates/4/index.html:26
+#: templates/4/index.html:17
 msgid "Glenn's birth place"
 msgstr "Glenn's geboorteplaats"
 
-#: templates/4/index.html:27
+#: templates/4/index.html:18
 msgid "Glenn's first employer (2013)"
 msgstr "Glenn's eerste werkgever (2013)"
 
-#: templates/4/index.html:28
+#: templates/4/index.html:19
 msgid "Sanne's middle name"
 msgstr "Sanne's middelste naam"
 
-#: templates/4/index.html:29
+#: templates/4/index.html:20
 msgid "\"Place\" where we first met"
 msgstr "\"Plaats\" waar we elkaar voor het eerst ontmoet hebben"
 
-#: templates/5/found.html:15
-msgid "Claim this geocache!"
-msgstr "Claim deze geocache!"
-
-#: templates/5/found.html:29 templates/general/verify.html:49
+#: templates/5/found.html:19 templates/general/verify.html:37
 msgid "Your name"
 msgstr "Je naam"
 
-#: templates/5/found.html:34
+#: templates/5/found.html:24
 msgid "Claim!"
 msgstr "Claim!"
 
-#: templates/5/index.html:38
+#: templates/5/index.html:32
 msgid ""
 "We had a nice walk through a forest and \"forgot\" 5 geocaches at the "
 "coordinates below. Go find them!"
@@ -240,7 +244,7 @@ msgstr ""
 "We hebben een mooie wandeling door een bos gemaakt en zijn 5 geocaches "
 "\"vergeten\" op de coördinaten hieronder. Go find them!"
 
-#: templates/5/index.html:39
+#: templates/5/index.html:33
 msgid ""
 "If someone finds a geocache, this will automatically reveal 2 letters of the "
 "keyword <b>to everyone</b>."
@@ -248,7 +252,7 @@ msgstr ""
 "Als iemand een geocache vindt, zal dit automatisch 2 letters van het "
 "sleutelwoord <b>aan iedereen</b> onthullen."
 
-#: templates/5/index.html:40
+#: templates/5/index.html:34
 #, python-format
 msgid ""
 "Oh, the best time to find them is after dark 🦇 as they light up! <a href="
@@ -257,16 +261,16 @@ msgstr ""
 "Oh, de beste tijd om ze te vinden is 's nachts 🦇 als ze oplichten! <a href="
 "\"%(geocache_url)s\" target=\"_blank\">(check it out)</a>"
 
-#: templates/5/index.html:50
+#: templates/5/index.html:44
 msgid "claimed by"
 msgstr "geclaimd door"
 
-#: templates/6/index.html:22
+#: templates/6/index.html:18
 msgid ""
 "Print & solve this Word Search Puzzle with completely random baby names."
 msgstr "Print & los deze woordzoeker op met volledig willekeurige babynamen."
 
-#: templates/6/index.html:23
+#: templates/6/index.html:19
 msgid ""
 "Combine the remaining 10 letters from left to right, top to bottom to get "
 "the keyword for this challenge."
@@ -274,31 +278,27 @@ msgstr ""
 "Combineer de resterende 10 letters van links naar rechts en van boven naar "
 "beneden om het sleutelwoord voor deze uitdaging te verkrijgen."
 
-#: templates/7/index.html:20
+#: templates/7/index.html:8
 msgid "Let's get lyrical! 🎵 We translated lyrics of 10 songs we like."
 msgstr ""
 "Let's get lyrical! 🎵 We vertaalden de lyrics van 10 wereldberoemde nummers."
 
-#: templates/7/index.html:21
+#: templates/7/index.html:9
 msgid ""
 "Take the first <b>letter</b> of the <b>title</b> of the songs we translated:"
 msgstr ""
 "Neem de <b>eerste letter</b> van de <b>titel</b> van de liedjes die we "
 "vertaald hebben:"
 
-#: templates/general/about.html:16
-msgid "Gender Reveal Challenge | gender.wtf"
-msgstr ""
-
-#: templates/general/about.html:23
+#: templates/general/about.html:4
 msgid "Welcome to the"
 msgstr "Welkom bij de"
 
-#: templates/general/about.html:25
+#: templates/general/about.html:9
 msgid "Hello friends, family & randos,"
 msgstr "Dag vrienden, familie & rando's,"
 
-#: templates/general/about.html:26
+#: templates/general/about.html:10
 msgid ""
 "We are very excited to announce that we're having a baby and that <b>you</b> "
 "can find out the gender before everyone else!"
@@ -306,7 +306,7 @@ msgstr ""
 "We zijn erg enthousiast om aan te kondigen dat we een baby krijgen en dat "
 "<b>jij</b> als allereerste het geslacht kunt ontdekken!"
 
-#: templates/general/about.html:27
+#: templates/general/about.html:11
 msgid ""
 "We decided to take \"gender reveal party\" to the next level and release "
 "<b>8 challenges</b> to the world."
@@ -314,7 +314,7 @@ msgstr ""
 "We hebben besloten om \"gender reveal party\" naar een hoger niveau te "
 "tillen en <b>8 challenges</b> op de wereld los te laten."
 
-#: templates/general/about.html:28
+#: templates/general/about.html:12
 msgid ""
 "Each challenge has a random lowercase 10-letter keyword as solution "
 "(example: <b>keywordone</b>). Get all 8 keywords to find out the gender!"
@@ -323,7 +323,7 @@ msgstr ""
 "(voorbeeld: <b>keywordone</b>). Vind alle 8 sleutelwoorden om het geslacht "
 "te achterhalen!"
 
-#: templates/general/about.html:29
+#: templates/general/about.html:13
 #, python-format
 msgid ""
 "Verify your solutions with the <a class=\"blink\" href=\"%(url_verify)s"
@@ -332,7 +332,7 @@ msgstr ""
 "Controleer je sleutelwoorden op <a class=\"blink\" href=\"%(url_verify)s"
 "\">deze pagina</a>."
 
-#: templates/general/about.html:30
+#: templates/general/about.html:14
 msgid ""
 "Challenges vary in difficulty from granny-proof to hacker-proof, and some "
 "will require working together."
@@ -340,7 +340,7 @@ msgstr ""
 "De challenges variëren in moeilijkheidsgraad van oma-proof tot hacker-proof, "
 "en voor sommige challenges zal je moeten samenwerken."
 
-#: templates/general/about.html:31
+#: templates/general/about.html:15
 msgid ""
 "Please join the <a href=\"https://www.facebook.com/groups/gender.wtf/\" "
 "target=\"_blank\">Gender Reveal Challenge</a> group on Facebook to share "
@@ -351,48 +351,47 @@ msgstr ""
 "voortgang en oplossingen te delen, problemen te rapporteren en hints te "
 "vragen."
 
-#: templates/general/about.html:32
+#: templates/general/about.html:16
 msgid "We had a blast creating this challenge, and we hope you'll like it!"
 msgstr ""
 "We hebben ons geamuseerd bij het maken van deze challenge en hopen dat je "
 "het leuk vindt!"
 
-#: templates/general/about.html:33
+#: templates/general/about.html:17
 msgid "Good luck & have fun!"
 msgstr "Veel succes & veel plezier!"
 
-#: templates/general/verify.html:10 templates/general/verify.html:15
-msgid "Solution checker"
-msgstr "Oplossing controleren"
-
-#: templates/general/verify.html:28
+#: templates/general/verify.html:16
 msgid "NOPE! All wrong"
 msgstr "NOPE! Volledig fout"
 
-#: templates/general/verify.html:30
+#: templates/general/verify.html:18
 msgid "Finally getting started 'ey? (1-3 correct keywords)"
 msgstr "Finally getting started 'ey? (1-3 correcte trefwoorden)"
 
-#: templates/general/verify.html:32
+#: templates/general/verify.html:20
 msgid "Keep going! (4-5 correct keywords)"
 msgstr "Ga zo door! (4-5 correcte sleutelwoorden)"
 
-#: templates/general/verify.html:34
+#: templates/general/verify.html:22
 msgid "Ok ok, maybe this challenge is too easy? (6-7 correct keywords)"
 msgstr ""
 "Oké, misschien is deze challenge te gemakkelijk? (6-7 correcte trefwoorden)"
 
-#: templates/general/verify.html:54
+#: templates/general/verify.html:42
 msgid "Keywords (comma separated)"
 msgstr "Sleutelwoorden (door komma of witregel gescheiden)"
 
-#: templates/general/verify.html:63
+#: templates/general/verify.html:51
 msgid "Check!"
 msgstr "Controleer!"
 
 #: templates/header.html:4
 msgid "solution checker"
 msgstr "oplossing"
+
+#~ msgid "Claim this geocache!"
+#~ msgstr "Claim deze geocache!"
 
 #~ msgid "About"
 #~ msgstr "Over"

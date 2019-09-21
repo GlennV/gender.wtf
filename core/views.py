@@ -34,7 +34,7 @@ def get_range(count):
 
 def about(request):
     return render(request, "general/about.html", {
-        "title": _("Welkom")
+        "title": _("Welcome")
     })
 
 
